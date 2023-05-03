@@ -20,5 +20,11 @@ p {
   font-size: 30px;
 }
 
-img {
+.btn-startgame {
+  width: 180px;
+  height: 50px;
+  background-color: green;
+  color: goldenrod;
+  border-radius: 5%;
+  font-size: large;
 }
