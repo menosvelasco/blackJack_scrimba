@@ -7,7 +7,12 @@ let isAlive = true;
 /* reassign message variable */
 let message = '';
 
+// DOM
+let dealerMessageEl = document.getElementById('dealer-el');
+let totalCardEl = document.querySelector('#total-card-el');
+
 function startGame() {
+  totalCardEl.textContent = `sum: ${sum}`;
   if (sum < 21) {
     message = 'do you want to draw a new card?';
   } else if (sum === 21) {
@@ -19,5 +24,5 @@ function startGame() {
     /* player is out of the game. */
     isAlive = false;
   }
-  console.log(message);
+  dealerMessageEl.textContent = message;
 }
