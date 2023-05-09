@@ -28,3 +28,7 @@ function startGame() {
   }
   dealerMessageEl.textContent = message;
 }
+/* draw a new card function*/
+function hitCard() {
+  console.log('Draw a new card from the deck.');
+}
