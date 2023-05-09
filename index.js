@@ -31,4 +31,9 @@ function startGame() {
 /* draw a new card function*/
 function hitCard() {
   console.log('Draw a new card from the deck.');
+  let drawCard = 7;
+
+  sum += drawCard;
+
+  startGame();
 }
