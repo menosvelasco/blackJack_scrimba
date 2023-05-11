@@ -40,5 +40,7 @@ function hitCard() {
 
   sum += drawCard;
 
+  cardsArr.push(drawCard);
+  console.log(cardsArr);
   renderGame();
 }
