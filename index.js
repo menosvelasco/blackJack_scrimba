@@ -1,10 +1,8 @@
-let firstCard = drawRandomCard();
-let secondCard = drawRandomCard();
-let cardsArr = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let cardsArr = [];
+let sum = 0;
 /* player status */
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 /* reassign message variable */
 let message = '';
 
@@ -26,6 +24,14 @@ function drawRandomCard() {
 }
 
 function startGame() {
+  isAlive = true;
+
+  let firstCard = drawRandomCard();
+  let secondCard = drawRandomCard();
+
+  cardsArr = [firstCard, secondCard];
+
+  sum = firstCard + secondCard;
   renderGame();
 }
 
