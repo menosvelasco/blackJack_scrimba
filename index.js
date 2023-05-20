@@ -1,5 +1,5 @@
-let firstCard = 8;
-let secondCard = 10;
+let firstCard = drawRandomCard();
+let secondCard = drawRandomCard();
 let cardsArr = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 /* player status */
@@ -12,6 +12,18 @@ let message = '';
 let dealerMessageEl = document.getElementById('dealer-el');
 let totalCardEl = document.querySelector('#total-card-el');
 let playerCardsEl = document.querySelector('#player-cards-el');
+
+function drawRandomCard() {
+  let randomCard = Math.floor(Math.random() * 13) + 1;
+
+  if (randomCard > 10) {
+    return 10;
+  } else if (randomCard === 1) {
+    return 11;
+  } else {
+    return randomCard;
+  }
+}
 
 function startGame() {
   renderGame();
@@ -40,12 +52,10 @@ function renderGame() {
 }
 /* draw a new card function*/
 function hitCard() {
-  console.log('Draw a new card from the deck.');
-  let drawCard = 7;
+  let drawCard = drawRandomCard();
 
   sum += drawCard;
 
   cardsArr.push(drawCard);
-  console.log(cardsArr);
   renderGame();
 }
