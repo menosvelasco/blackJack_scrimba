@@ -27,3 +27,7 @@ button {
   border-radius: 5%;
   font-size: large;
 }
+#player-el {
+  color: black;
+  background-color: blanchedalmond;
+}

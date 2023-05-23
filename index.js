@@ -1,3 +1,7 @@
+let player = {
+  name: 'menos',
+  chips: 400,
+};
 let cardsArr = [];
 let sum = 0;
 /* player status */
@@ -10,6 +14,9 @@ let message = '';
 let dealerMessageEl = document.getElementById('dealer-el');
 let totalCardEl = document.querySelector('#total-card-el');
 let playerCardsEl = document.querySelector('#player-cards-el');
+let playerEl = document.querySelector('#player-el');
+
+playerEl.textContent = `${player.name}: $${player.chips}`;
 
 function drawRandomCard() {
   let randomCard = Math.floor(Math.random() * 13) + 1;
